@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Handjet', cursive;
+}
+
+.game-board {
+    border-bottom: 150px solid transparent;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    animation: movimento-chao 0.2s infinite linear;
+    border-image-source: linear-gradient(#87CEEB, #E0F6FF);
+    border-image: url(../img/chao.png) 2000 100;
+    border-image-slice: 750;
+}
+
+@keyframes movimento-chao {
+    0% {
+        border-image-slice: 750 750 750 100;
+    }
+
+    100% {
+        border-image-slice: 750 100 750 750;
+    }
+}
+
+
+.cano {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    right: -80px;
+}
+
+@keyframes animacao-cano {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.mario {
+    width: 150px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.pulo {
+    animation: animacao-mario-pulo 500ms ease-out;
+}
+
+.movimento-cano {
+    animation: animacao-cano 2s infinite linear;
+}
+
+@keyframes animacao-mario-pulo {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+.nuvens {
+    position: absolute;
+    width: 550px;
+    animation: animacao-nuvem 20s infinite linear;
+    top: 50px;
+}
+
+@keyframes animacao-nuvem {
+    0% {
+        right: -550px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+.chao {
+    position: absolute;
+    bottom: 0;
+}
+
+#pontuacao {
+    font-size: 80px;
+    color: white;
+    text-shadow: 5px 2px black;
+    padding: 20px 50px;
+    position: absolute;
+    z-index: 1;
+}
+
+/*TELA GAME OVER*/
+
+.game-over {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.342);
+    align-items: center;
+    display: none;
+}
+
+.msg-game-over {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 500px;
+    background-color: rgb(255, 238, 216);
+    height: 300px;
+    border: 6px solid rgb(44, 23, 6);
+}
+
+.msg-game-over h2 {
+    background: linear-gradient(to bottom, #ff0000, #e6f563);
+    -webkit-background-clip: text;
+    background-clip: none;
+    color: transparent;
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.msg-game-over p {
+    margin-top: 25px;
+    font-size: 2em;
+}
+
+.msg-game-over .btn {
+    padding: 5px 10px;
+    font-size: 2em;
+    background-color: transparent;
+    bottom: 0px;
+    border: none;
+    margin-top: 50px;
+}
+
+.msg-game-over .btn:hover {
+    color: #F18736;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 2;
+    align-items: center;
+    display: flex;
+}
+
+.icones {
+    text-align: right;
+    position: relative;
+    bottom: -45px;
+    padding: 0 20px;
+}
+
+.icones i {
+    padding: 5px;
+    font-size: 30px;
+    color: rgb(44, 23, 6);
+
+}
+
+.icones i:hover {
+    padding: 5px;
+    font-size: 30px;
+    color: #F18736;
+    cursor: pointer;
+}
+
+.modo-escuro {
+    background: linear-gradient(#010238, #242244);
+}

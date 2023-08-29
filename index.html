@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/sytle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&family=Handjet:wght@600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Super Mario Jump</title>
+</head>
+
+<body>
+    <div class="game-board">
+        <p id="pontuacao">0</p>
+        <img src="img/clouds.png" class="nuvens">
+        <img src="img/mario.gif" class="mario">
+        <img src="img/pipe.png" class="cano">
+    </div>
+
+    <div class="game-over">
+        <div class="msg-game-over">
+            <h2>Game Over</h2>
+            <p id="pontuacaoMax">Pontuação Máxima: 0</p>
+            <button onclick="RestartGame()" class="btn">Reiniciar </button>
+            <button onclick="Menu()" class="btn">Menu</button>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="msg-game-over items-menu">
+            <h2>Super Mario Jump</h2>
+            <button onclick="StartGame()" class="btn">Start</button>
+            <div class="icones">
+                <i id="btn-audio" onclick="MudarAudio()" class="bi bi-volume-up-fill"></i>
+                <i id="btn-tema" onclick="MudarTema()" class="bi bi-moon-fill"></i>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="/js/script.js"></script>
