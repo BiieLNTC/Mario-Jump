@@ -195,7 +195,7 @@ function MudarTema() {
 function SetarTemaClaro() {
     tema.setAttribute('class', 'bi bi-moon-fill')
     gameBoard.setAttribute('class', 'game-board')
-    gameBoard.style.borderImage = "url(../img/chao.png) 2000 100"
+    gameBoard.style.borderImage = "url(./img/chao.png) 2000 100"
     gameBoard.style.animation = "movimento-chao 0.2s infinite linear"
     cano.src = 'img/pipe.png'
 }
@@ -203,7 +203,7 @@ function SetarTemaClaro() {
 function SetarTemaEscuro() {
     tema.setAttribute('class', 'bi bi-sun-fill')
     gameBoard.setAttribute('class', 'game-board modo-escuro')
-    gameBoard.style.borderImage = "url(../img/chao-dark.png) 2000 100"
+    gameBoard.style.borderImage = "url(./img/chao-dark.png) 2000 100"
     gameBoard.style.animation = "movimento-chao 0.2s infinite linear"
     cano.src = 'img/pipe-dark.png'
 }
